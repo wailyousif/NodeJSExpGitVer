@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Index Page</title>
+</head>
+<body>
+<h3>New Person</h3>
+Please enter your name and age:-<br /><br />
+<form action="/postform" method="post">
+	Name:<input type="text" id="name" name="name" /><br /><br />
+	Age:<input type="text" id="age" name="age" /><br /><br />
+	<input type="submit" value="Submit Form" />
+</form>
+<hr />
+<h3>Persons:-</h3>
+<ul class="person">
+	<% for(var i=0; i<person.length; i++) {%>
+		<li class="person">
+      			<span><%= person[i].name %></span>
+      			<span><%= person[i].age %></span>
+    		</li>
+  	<% } %>
+</ul>
+</body>
+</html>
